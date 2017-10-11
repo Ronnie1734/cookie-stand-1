@@ -8,6 +8,11 @@ var firstAndPike = {
     var min = Math.ceil(this.minCustomers);
     var max = Math.floor(this.maxCustomers);
     return Math.floor(Math.random() * (max - min)) + min;
+  },
+  cookiesPerHour: function() {
+    var avgSale = this.avgSale;
+    var customers = this.getCustomers();
+    return Math.floor(avgSale * customers);
   }
 };
 
@@ -30,6 +35,11 @@ var seaTac = {
     var min = Math.ceil(this.minCustomers);
     var max = Math.floor(this.maxCustomers);
     return Math.floor(Math.random() * (max - min)) + min;
+  },
+  cookiesPerHour: function() {
+    var avgSale = this.avgSale;
+    var customers = this.getCustomers();
+    return Math.floor(avgSale * customers);
   }
 };
 
@@ -41,6 +51,11 @@ var seaCenter = {
     var min = Math.ceil(this.minCustomers);
     var max = Math.floor(this.maxCustomers);
     return Math.floor(Math.random() * (max - min)) + min;
+  },
+  cookiesPerHour: function() {
+    var avgSale = this.avgSale;
+    var customers = this.getCustomers();
+    return Math.floor(avgSale * customers);
   }
 };
 
@@ -52,5 +67,10 @@ var capHill = {
     var min = Math.ceil(this.minCustomers);
     var max = Math.floor(this.maxCustomers);
     return Math.floor(Math.random() * (max - min)) + min;
+  },
+  cookiesPerHour: function() {
+    var avgSale = this.avgSale;
+    var customers = this.getCustomers();
+    return Math.floor(avgSale * customers);
   }
 };
