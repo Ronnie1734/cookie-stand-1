@@ -13,34 +13,33 @@
         <img class="image-responsive" src="img/fish.png">
       </div>
       <h1 id="heading">Cookie Stands</h1>
-
-      <div class="container">
-        <h3 id="first-and-pike-heading"></h3>
-        <ul id="first-and-pike-list"></ul>
-      </div>
-
-      <div class="container">
-        <h3 id="alki-heading"></h3>
-        <ul id="alki-list"></ul>
-      </div>
-
-      <div class="container">
-        <h3 id="seatac-heading"></h3>
-        <ul id="seatac-list"></ul>
-      </div>
-
-      <div class="container">
-        <h3 id="seacenter-heading"></h3>
-        <ul id="seacenter-list"></ul>
-      </div>
-
-      <div class="container">
-        <h3 id="caphill-heading"></h3>
-        <ul id="caphill-list"></ul>
-      </div>
     </div>
 
-    <script type="text/javascript" src="app.js"></script>
+    <table id="cookie-stands">
+      <thead id="table-head"></thead>
+      <tbody id="table-body"></tbody>
+      <tfoot id="table-foot"></tfoot>
+    </table>
+    <footer>
+      <div id="footer-content">
+        <div class="locations info">
+          <h2>Store Locations</h2>
+          <ul id="locations-list"></ul>
+        </div>
+        <div class="hours info">
+          <h2>Store Hours</h2>
+          <p>6am - 8pm</p>
+        </div>
+        <div class="contact info">
+          <h2>Contact Info</h2>
+          <p>Awesome Cookie Stands Inc.</p>
+          <p>tel: 555-555-5555</p>
+          <p>email: getcookies@cookiestands.com</p>
+        </div>
+      </div>
+    </footer>
 
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="table.js"></script>
   </body>
 </html>

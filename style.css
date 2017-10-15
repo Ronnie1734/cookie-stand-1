@@ -1,7 +1,7 @@
 body {
   background: #34495E;
   color: white;
-  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   float: left;
   margin: 0;
   width: 100%
@@ -31,7 +31,70 @@ ul {
   text-align: center;
 }
 
+#footer-content {
+  display: flex;
+  justify-content: space-around;
+}
+
 .container {
   float: left;
   padding-right: 15px;
+}
+
+footer {
+  padding-bottom: 40px;
+}
+
+/* Table Styles */
+table {
+  color: white;
+  background: #2e4052;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-collapse: collapse;
+}
+
+table th {
+  font-family: Lato, Arial, sans-serif;
+  color: #34495e;
+  background: #1abc9c;
+}
+
+table, tr, td, th {
+  padding: 14px;
+}
+
+table td {
+  border-bottom: 1px solid white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1ABC9C;
+}
+
+table thead tr th:first-of-type {
+  border-right: 1px solid white;
+}
+
+table thead tr th:last-of-type {
+  max-width: 60px;
+}
+
+table tbody tr {
+  background: #2e4052;
+}
+
+table tbody tr td:first-of-type {
+  border-right: 1px solid white;
+}
+
+table tfoot {
+  border-bottom: transparent;
+}
+
+table tfoot td {
+  border-bottom: transparent;
+  color: white;
+}
+
+table tfoot td:first-of-type {
+  border-right: 1px solid white;
 }
