@@ -8,7 +8,6 @@ function MakeLocation(name, minCustomers, maxCustomers, avgSale) {
   this.minCustomers = minCustomers;
   this.maxCustomers = maxCustomers;
   this.avgSale = avgSale;
-  //why is this an array?
   this.randCustPerHour = [];
   this.cookiesPerHour = [];
   this.totalCookies = 0;
