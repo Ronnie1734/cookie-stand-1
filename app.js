@@ -119,3 +119,37 @@ function locationsList(inputArray) {
   }
 }
 locationsList(allLocations);
+
+//get the form
+var cookieForm = document.getElementById('cookie-form');
+
+//handle new store submission
+function handleStoreSubmit(event) {
+  var tableBodyEl = document.getElementById('table-body');
+  event.preventDefault(event);
+  console.log(event);
+  console.log(event.target.storename);
+
+  //Check empty fields
+  if (!event.target.storename.value || !event.target.mincust.value
+    || !event.target.maxcust.value || !event.target.avgcook.value) {
+    return alert('Fields cannot be empty!');
+  }
+
+  var storeName = event.target.storename.value;
+  var minCust = event.target.mincust.value;
+  var maxCust = event.target.maxcust.value;
+  var avgSale = event.target.avgcook.value;
+
+  //Create the new store
+  var newStore = new MakeLocation(storeName, minCust, maxCust, avgSale);
+  tableBodyEl.innerHTML = '';
+  makeLocationsRow(allLocations);
+
+  event.target.storename.value = null;
+  event.target.mincust.value = null;
+  event.target.maxcust.value = null;
+  event.target.avgcook.value = null;
+}
+
+cookieForm.addEventListener('submit', handleStoreSubmit);

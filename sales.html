@@ -15,12 +15,28 @@
       <h1 id="heading">Cookie Stands</h1>
     </div>
 
+    <div class="cookie-stand-form">
+      <form id="cookie-form">
+        <fieldset>
+          <legend>Add Store Location</legend>
+          <label for="storename">Store Name:</label><br />
+          <input type="text" name="storename"><br />
+          <label for="mincust">Minimum Customers Per Hour:</label><br />
+          <input type="text" name="mincust"><br />
+          <label for="maxcust">Maximum Customers Per Hour:</label><br />
+          <input type="text" name="maxcust"><br />
+          <label for="avgcook">Average Cookies Per Sale:</label><br />
+          <input type="text" name="avgcook">
+          <button type="submit" name="submitStore">Add Store</button>
+        </fieldset>
+      </form>
+    </div>
     <table id="cookie-stands">
       <thead id="table-head"></thead>
       <tbody id="table-body"></tbody>
       <tfoot id="table-foot"></tfoot>
     </table>
-    
+
     <footer>
       <div id="footer-content">
         <div class="locations info">
@@ -41,6 +57,5 @@
     </footer>
 
     <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="table.js"></script>
   </body>
 </html>

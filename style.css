@@ -98,3 +98,39 @@ table tfoot td {
 table tfoot td:first-of-type {
   border-right: 1px solid white;
 }
+
+.cookie-stand-form fieldset {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 0;
+  background: #1bbc9b;
+  margin-bottom: 40px;
+  padding: 50px 30px 30px 30px;
+}
+
+.cookie-stand-form fieldset legend {
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+  top: 30px;
+  font-weight: bold;
+}
+
+.cookie-stand-form fieldset input {
+  margin-bottom: 15px;
+  width: 100%;
+  border: 0;
+  height: 30px;
+}
+
+.cookie-stand-form fieldset button {
+  border: 0;
+  background-color: #2f4153;
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  padding: 19px;
+  font-size: 18px;
+}
