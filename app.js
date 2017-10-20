@@ -2,6 +2,7 @@
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 var allLocations = [];
+var netTotal = [];
 
 function MakeLocation(name, minCustomers, maxCustomers, avgSale) {
   this.name = name;
@@ -65,6 +66,7 @@ makeHeaderRow(hours);
 
 function makeLocationsRow(inputArray) {
   var tbodyEl = document.getElementById('table-body');
+  var columnTotal = 0;
 
   for(var i = 0; i < inputArray.length; i++) {
     var trEl = document.createElement('tr');
@@ -81,9 +83,11 @@ function makeLocationsRow(inputArray) {
       trEl.appendChild(tdEl);
     }
     totalTd.textContent = inputArray[i].totalCookies;
+    columnTotal += inputArray[i].totalCookies;
     trEl.appendChild(totalTd);
     tbodyEl.appendChild(trEl);
   }
+  netTotal.push(columnTotal);
 }
 makeLocationsRow(allLocations);
 
@@ -91,6 +95,9 @@ function makeTotalsRow(inputArray) {
   var tableFoot = document.getElementById('table-foot');
   var trEl = document.createElement('tr');
   var totalTd = document.createElement('td');
+  var totalsTd = document.createElement('td');
+  var rowTotal = 0;
+
   totalTd.textContent = 'Totals';
   trEl.appendChild(totalTd);
 
@@ -102,12 +109,25 @@ function makeTotalsRow(inputArray) {
       total += inputArray[j].cookiesPerHour[i];
     }
 
+    rowTotal += total;
     tdEl.textContent = total;
     trEl.appendChild(tdEl);
   }
+  netTotal.push(rowTotal);
+  totalsTd.textContent = netTotalTd(netTotal);
+  trEl.appendChild(totalsTd);
   tableFoot.appendChild(trEl);
 }
 makeTotalsRow(allLocations);
+
+function netTotalTd(array){
+  var total = 0;
+
+  for (var i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+  return total;
+}
 
 function locationsList(inputArray) {
   var ulEl = document.getElementById('locations-list');
@@ -143,6 +163,7 @@ function handleStoreSubmit(event) {
 
   //Create the new store
   var newStore = new MakeLocation(storeName, minCust, maxCust, avgSale);
+
   tableBodyEl.innerHTML = '';
   makeLocationsRow(allLocations);
 

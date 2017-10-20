@@ -95,6 +95,10 @@ table tfoot td {
   color: white;
 }
 
+table tr:hover {
+  background-color: #34495E;
+}
+
 table tfoot td:first-of-type {
   border-right: 1px solid white;
 }
@@ -114,6 +118,7 @@ table tfoot td:first-of-type {
   position: relative;
   top: 30px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 .cookie-stand-form fieldset input {
@@ -121,6 +126,14 @@ table tfoot td:first-of-type {
   width: 100%;
   border: 0;
   height: 30px;
+  color: #304152;
+  font-size: 16px;
+}
+
+.cookie-stand-form fieldset label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 .cookie-stand-form fieldset button {
@@ -133,4 +146,10 @@ table tfoot td:first-of-type {
   width: 100%;
   padding: 19px;
   font-size: 18px;
+  border-radius: 0;
+}
+
+.cookie-stand-form fieldset button:hover {
+  background-color: #34495E;
+  cursor: pointer;
 }
