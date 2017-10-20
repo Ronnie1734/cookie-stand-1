@@ -156,6 +156,11 @@ function handleStoreSubmit(event) {
     return alert('Fields cannot be empty!');
   }
 
+  if (isNaN(event.target.maxcust.value) || isNaN(event.target.mincust.value)
+   || isNaN(event.target.avgcook.value)) {
+    return alert('Please enter a number on the appropriate fields!');
+  }
+
   var storeName = event.target.storename.value;
   var minCust = event.target.mincust.value;
   var maxCust = event.target.maxcust.value;
