@@ -137,26 +137,16 @@ function netTotalTd(array){
 
 //get the form
 var cookieForm = document.getElementById('cookie-form');
-
 //handle new store submission
 function handleStoreSubmit(event) {
   var tableBodyEl = document.getElementById('table-body');
-  event.preventDefault(event);
-  //Check empty fields
-  if (!event.target.storename.value || !event.target.mincust.value
-    || !event.target.maxcust.value || !event.target.avgcook.value) {
-    return alert('Fields cannot be empty!');
-  }
 
-  if (isNaN(event.target.maxcust.value) || isNaN(event.target.mincust.value)
-   || isNaN(event.target.avgcook.value)) {
-    return alert('Please enter a number on the appropriate fields!');
-  }
+  event.preventDefault(event);
 
   var storeName = event.target.storename.value;
-  var minCust = event.target.mincust.value;
   var maxCust = event.target.maxcust.value;
   var avgSale = event.target.avgcook.value;
+  var minCust = event.target.mincust.value;
 
   //Create the new store
   var newStore = new MakeLocation(storeName, minCust, maxCust, avgSale);

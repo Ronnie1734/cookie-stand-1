@@ -153,3 +153,34 @@ table tfoot td:first-of-type {
   background-color: #34495E;
   cursor: pointer;
 }
+
+input:invalid {
+  box-shadow: 0 0 5px 1px #f18b8b;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+input.error {
+  box-shadow: 0 0 5px 3px #eb6868;
+  -moz-box-shadow: 0 0 5px 3px #eb6868;
+  -webkit-box-shadow: 0 0 5px 3px #eb6868;
+}
+.error.active {
+  padding: 0.3em;
+}
+
+#message {
+  max-width: 448px;
+  margin: 0 auto;
+  background: #d46464;
+  border: 1px solid #eb6a6a;
+  padding: 5px;
+  color: #f9c9c9;
+  display: none;
+}
+
+#message.active {
+  display: block;
+}

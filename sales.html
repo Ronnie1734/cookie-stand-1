@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <title>Cookie Stand</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   </head>
   <body>
@@ -16,17 +15,18 @@
     </div>
 
     <div class="cookie-stand-form">
+
       <form id="cookie-form">
         <fieldset>
           <legend>Add Store Location</legend>
           <label for="storename">Store Name:</label><br />
-          <input type="text" name="storename"><br />
+          <input type="text" id="store-name" name="storename" required minlength="3" maxlength="16"><br />
           <label for="mincust">Minimum Customers Per Hour:</label><br />
-          <input type="text" name="mincust"><br />
+          <input type="text" id="min-cust" name="mincust" required pattern="[0-9]"><br />
           <label for="maxcust">Maximum Customers Per Hour:</label><br />
-          <input type="text" name="maxcust"><br />
+          <input type="text" id="max-cust" name="maxcust" required pattern="[0-9]"><br />
           <label for="avgcook">Average Cookies Per Sale:</label><br />
-          <input type="text" name="avgcook">
+          <input type="text" id="avg-cook" name="avgcook" required pattern="^[0-9]\d*(\.\d+)?$">
           <button type="submit" name="submitStore">Add Store</button>
         </fieldset>
       </form>
