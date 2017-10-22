@@ -1,10 +1,124 @@
 body {
-  background: #34495E;
-  color: white;
+  margin-top: 30px;
+  color: #333;
   font-family: Helvetica, Arial, sans-serif;
   float: left;
   margin: 0;
   width: 100%
+}
+
+/* navbar */
+.nav-brand img {
+  max-width: 180px;
+  float: left;
+}
+
+header {
+  position: fixed;
+  width: 100%
+}
+
+nav {
+  padding: 20px 15px;
+  background: #2e4052;
+}
+
+.nav {
+  float: right;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: none;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.nav li a.active {
+  color: #26e4bf;
+}
+
+.nav li a:hover {
+  color: #26e4bf;
+}
+
+.main-heading {
+  background-image: url(img/family.jpg);
+  margin-bottom: 50px;
+  background-repeat: no-repeat;
+  background-color: #777;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+}
+
+.heading-container {
+  background: rgba(0,0,0,.5);
+}
+
+.page-heading {
+  padding: 300px 0;
+  text-align: center;
+  color: white;
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1 }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1 }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1 }
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1 }
+}
+
+.page-title, .subheading {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+
+  -webkit-animation: fadein 3s;
+  -moz-animation: fadin 3s;
+  -ms-animation: fadein 3s;
+  animation: fadein 3s;
+}
+
+.subheading {
+  font-size: 24px;
+}
+
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+.main-content p {
+  line-height: 1.5;
+  margin: 30px 0;
+  font-size: 20px;
 }
 
 ul {
@@ -12,8 +126,15 @@ ul {
 }
 
 .wrapper {
-  max-width: 960px;
-  margin: 0 auto;
+  margin-top: 96px;
+}
+
+body.locations .main-heading {
+  margin-bottom: 0;
+}
+
+body.locations .wrapper {
+  margin-top: 0;
 }
 
 #fish-icon {
@@ -31,18 +152,40 @@ ul {
   text-align: center;
 }
 
-#footer-content {
-  display: flex;
-  justify-content: space-around;
-}
-
 .container {
   float: left;
   padding-right: 15px;
 }
 
 footer {
+  background-color: #2f4051;
+  padding: 15px 0;
+}
+
+.footer-wrapper {
   padding-bottom: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+footer .footer-logo {
+  float: left;
+}
+
+footer .footer-logo img {
+  max-width: 100px;
+}
+
+.fa {
+  color: #65809a;
+}
+
+footer .footer-socials {
+  float: right;
+}
+
+footer .footer-socials ul li {
+  display: inline-block;
 }
 
 /* Table Styles */
@@ -103,6 +246,7 @@ table tfoot td:first-of-type {
   border-right: 1px solid white;
 }
 
+/* form styles */
 .cookie-stand-form fieldset {
   max-width: 400px;
   margin: 0 auto;
@@ -122,12 +266,17 @@ table tfoot td:first-of-type {
 }
 
 .cookie-stand-form fieldset input {
+  font-family: 'FontAwesome', Lato;
   margin-bottom: 15px;
   width: 100%;
   border: 0;
   height: 30px;
   color: #304152;
   font-size: 16px;
+}
+
+.cookie-stand-form fieldset input[placeholder] {
+  padding-left: 5px;
 }
 
 .cookie-stand-form fieldset label {
@@ -183,4 +332,62 @@ input.error {
 
 #message.active {
   display: block;
+}
+
+.store-wrapper {
+  padding: 70px 0;
+}
+.store-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.store-wrapper:nth-child(odd) {
+  background-color: #f5f5f5;
+}
+
+.store-image {
+  float: left;
+  max-width: 40%;
+}
+.store-image img {
+  max-width: 100%;
+}
+
+.store-info {
+  float: right;
+}
+
+.store-name {
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+address {
+  font-size: 18px;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.buy-button {
+  max-width: 80px;
+  text-decoration: none;
+  border: 1px solid #1abc9c;
+  background: #1abc9c;
+  height: 20px;
+  display: block;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+.buy-button:hover {
+  background-color: #44d8bb;
+  border-color: #44d8bb;
 }

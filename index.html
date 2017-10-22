@@ -5,31 +5,145 @@
     <title>Cookie Stand</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
-  <body>
-    <div class="wrapper">
-      <div id="footer-content">
-        <div class="locations info">
-          <h2>Store Locations</h2>
-          <ul id="locations-list">
-            <li>Seattle Center</li>
-            <li>Capitol Hill</li>
-            <li>SeaTac Airport</li>
-            <li>Alki</li>
-            <li>First And Pike</li>
-          </ul>
+  <body class="locations">
+
+    <header>
+      <nav class="clearfix">
+        <div class="nav-brand">
+          <a href="index.html"><img src="img/salmon.png" alt="fish"></a>
         </div>
-        <div class="hours info">
-          <h2>Store Hours</h2>
-          <p>6am - 8pm</p>
-        </div>
-        <div class="contact info">
-          <h2>Contact Info</h2>
-          <p>Awesome Cookie Stands Inc.</p>
-          <p>tel: 555-555-5555</p>
-          <p>email: getcookies@cookiestands.com</p>
+        <ul class="nav">
+          <li><a href="sales.html">Cookie Stand Sales</a></li>
+          <li><a class="active" href="#">Stand Locations</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="main-heading">
+      <div class="heading-container">
+        <div class="page-heading">
+          <h1 class="page-title">Store Locations</h1>
         </div>
       </div>
     </div>
+
+    <div class="wrapper">
+      <div class="locations info">
+          <div id="locations-container">
+
+            <div class="store-wrapper">
+              <div class="store-container clearfix">
+                <div class="store-image">
+                  <img src="img/store-front.jpeg">
+                </div>
+                <div class="store-info">
+                  <h3 class="store-name">Seattle</h3>
+                  <address>
+                    <p class="address"><i class="fa fa-map-marker">&nbsp;</i>305 Harrison St, Seattle, WA 98109</p>
+                    <p class="hours"><i class="fa fa-clock-o">&nbsp;</i>Store Hours: 6am-8pm</p>
+                    <p class="phone"><i class="fa fa-phone">&nbsp;</i>Phone: 555-555-5555</p>
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <div class="store-wrapper">
+              <div class="store-container clearfix">
+                <div class="store-image">
+                  <img src="img/store-front.jpeg">
+                </div>
+                <div class="store-info">
+                  <h3 class="store-name">Capitol Hill</h3>
+                  <address>
+                    <p class="address"><i class="fa fa-map-marker">&nbsp;</i>305 Harrison St, Seattle, WA 98109</p>
+                    <p class="hours"><i class="fa fa-clock-o">&nbsp;</i>Store Hours: 6am-8pm</p>
+                    <p class="phone"><i class="fa fa-phone">&nbsp;</i>Phone: 555-555-5555</p>
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <div class="store-wrapper">
+              <div class="store-container clearfix">
+                <div class="store-image">
+                  <img src="img/store-front.jpeg">
+                </div>
+                <div class="store-info">
+                  <h3 class="store-name">Alki</h3>
+                  <address>
+                    <p class="address"><i class="fa fa-map-marker">&nbsp;</i>305 Harrison St, Seattle, WA 98109</p>
+                    <p class="hours"><i class="fa fa-clock-o">&nbsp;</i>Store Hours: 6am-8pm</p>
+                    <p class="phone"><i class="fa fa-phone">&nbsp;</i>Phone: 555-555-5555</p>
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <div class="store-wrapper">
+              <div class="store-container clearfix">
+                <div class="store-image">
+                  <img src="img/store-front.jpeg">
+                </div>
+                <div class="store-info">
+                  <h3 class="store-name">Seattle Center</h3>
+                  <address>
+                    <p class="address"><i class="fa fa-map-marker">&nbsp;</i>305 Harrison St, Seattle, WA 98109</p>
+                    <p class="hours"><i class="fa fa-clock-o">&nbsp;</i>Store Hours: 6am-8pm</p>
+                    <p class="phone"><i class="fa fa-phone">&nbsp;</i>Phone: 555-555-5555</p>
+                  </address>
+                </div>
+              </div>
+            </div>
+
+            <div class="store-wrapper">
+              <div class="store-container clearfix">
+                <div class="store-image">
+                  <img src="img/store-front.jpeg">
+                </div>
+                <div class="store-info">
+                  <h3 class="store-name">SeaTac Airport</h3>
+                  <address>
+                    <p class="address"><i class="fa fa-map-marker">&nbsp;</i>305 Harrison St, Seattle, WA 98109</p>
+                    <p class="hours"><i class="fa fa-clock-o">&nbsp;</i>Store Hours: 6am-8pm</p>
+                    <p class="phone"><i class="fa fa-phone">&nbsp;</i>Phone: 555-555-5555</p>
+                  </address>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="clearfix">
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <img src="img/frosted-cookie.jpg" alt="frosted-cookie">
+        </div>
+        <div class="footer-socials">
+          <ul class="social-media-links">
+            <li>
+              <a href="https://twitter.com/SeattleMOR" target="_blank">
+              <span aria-hidden="true" class="fa fa-twitter fa-2x">&nbsp;</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <span aria-hidden="true" class="fa fa-facebook-official fa-2x">&nbsp;</span>
+               </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <span aria-hidden="true" class="fa fa-youtube-play fa-2x">&nbsp;</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
