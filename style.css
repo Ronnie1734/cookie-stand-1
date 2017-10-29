@@ -1,10 +1,8 @@
 body {
   margin-top: 30px;
   color: #333;
-  font-family: Helvetica, Arial, sans-serif;
-  float: left;
-  margin: 0;
-  width: 100%
+  background: #34495E;
+  color: white;
 }
 
 /* navbar */
@@ -125,6 +123,10 @@ ul {
   padding-left: 20px
 }
 
+ul li {
+  color: #3498db;
+}
+
 .wrapper {
   margin-top: 96px;
 }
@@ -150,6 +152,11 @@ body.locations .wrapper {
   font-size: 40px;
   text-transform: uppercase;
   text-align: center;
+}
+
+#footer-content {
+  display: flex;
+  justify-content: space-around;
 }
 
 .container {
@@ -391,3 +398,4 @@ address {
   background-color: #44d8bb;
   border-color: #44d8bb;
 }
+
