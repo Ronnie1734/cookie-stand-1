@@ -4,68 +4,81 @@
     <meta charset="utf-8">
     <title>Cookie Stand</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="reset.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
   </head>
   <body>
+
+    <header>
+      <nav class="clearfix">
+        <div class="nav-brand">
+          <img src="img/salmon.png" alt="fish">
+        </div>
+        <ul class="nav">
+          <li><a class="active" href="#">Cookie Stand Sales</a></li>
+          <li><a href="index.html">Stand Locations</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <div class="wrapper">
-      <div id="fish-icon">
-        <img class="image-responsive" src="img/fish.png">
-      </div>
-      <h1 id="heading">Cookie Stands</h1>
 
-      <div class="container">
-        <h3 id="first-and-pike-heading"></h3>
-        <ul id="first-and-pike-list"></ul>
-      </div>
-
-      <div class="container">
-        <h3 id="alki-heading"></h3>
-        <ul id="alki-list"></ul>
+      <div class="main-heading">
+        <div class="heading-container">
+          <div class="page-heading">
+            <h1 class="page-title">Cookie Stands</h1>
+          </div>
+        </div>
       </div>
 
-      <div class="container">
-        <h3 id="seatac-heading"></h3>
-        <ul id="seatac-list"></ul>
+      <div class="cookie-stand-form">
+        <form id="cookie-form">
+          <fieldset>
+            <legend>Add Store Location</legend>
+            <label for="storename">Store Name:</label><br />
+            <input type="text" id="store-name" name="storename" required minlength="3" maxlength="16" placeholder="&#xf1ad;"><br />
+            <label for="mincust">Minimum Customers Per Hour:</label><br />
+            <input type="text" id="min-cust" name="mincust" required pattern="[0-9]" placeholder="&#xf1ec;"><br />
+            <label for="maxcust">Maximum Customers Per Hour:</label><br />
+            <input type="text" id="max-cust" name="maxcust" required pattern="[0-9]" placeholder="&#xf1ec;"><br />
+            <label for="avgcook">Average Cookies Per Sale:</label><br />
+            <input type="text" id="avg-cook" name="avgcook" required pattern="^[0-9]\d*(\.\d+)?$" placeholder="&#xf1ec;">
+            <button type="submit" name="submitStore">Add Store</button>
+          </fieldset>
+        </form>
       </div>
 
-      <div class="container">
-        <h3 id="seacenter-heading"></h3>
-        <ul id="seacenter-list"></ul>
-      </div>
-
-      <div class="container">
-        <h3 id="caphill-heading"></h3>
-        <ul id="caphill-list"></ul>
-      </div>
+      <table id="cookie-stands"></table>
     </div>
 
-    <footer>
-      <div id="footer-content">
-        <div class="locations info">
-          <h2>Store Locations</h2>
-          <ul id="locations-list">
-            <li>First and Pike</li>
-            <li>Seattle Center</li>
-            <li>SeaTac Airport</li>
-            <li>Capitol Hill</li>
-            <li>Alki</li>
+    <footer class="clearfix">
+      <div class="footer-wrapper">
+        <div class="footer-logo">
+          <img src="img/frosted-cookie.jpg" alt="frosted-cookie">
+        </div>
+        <div class="footer-socials">
+          <ul class="social-media-links">
+            <li>
+              <a href="https://twitter.com/SeattleMOR" target="_blank">
+              <span aria-hidden="true" class="fa fa-twitter fa-2x">&nbsp;</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <span aria-hidden="true" class="fa fa-facebook-official fa-2x">&nbsp;</span>
+               </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <span aria-hidden="true" class="fa fa-youtube-play fa-2x">&nbsp;</span>
+              </a>
+            </li>
           </ul>
-        </div>
-        <div class="hours info">
-          <h2>Store Hours</h2>
-          <p>6am - 8pm</p>
-        </div>
-        <div class="contact info">
-          <h2>Contact Info</h2>
-          <p>Awesome Cookie Stands Inc.</p>
-          <p>tel: 555-555-5555</p>
-          <p>email: getcookies@cookiestands.com</p>
         </div>
       </div>
     </footer>
-
     <script type="text/javascript" src="app.js"></script>
-
   </body>
 </html>
